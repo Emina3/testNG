@@ -4,6 +4,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
 
@@ -16,17 +19,28 @@ public class Driver {
         if(driver==null){
            switch(ConfigReader.getProperty("browser")){
                case "chrome":
-               driver= WebDriverManager.chromedriver().create(); //Selenium 4.5 ==> create()
+                   WebDriverManager.chromedriver().setup();
+                   driver = new ChromeDriver();
                    break;
+
                case "firefox":
-                   driver=WebDriverManager.firefoxdriver().create();
+                   WebDriverManager.firefoxdriver().setup();
+                   driver=new FirefoxDriver();
                    break;
+
                case "chrome-headless":
                    WebDriverManager.chromedriver().setup();
-                   driver =new ChromeDriver(new ChromeOptions().setHeadless(true));
+                   driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                    break;
+
                case "edge":
-                   driver = WebDriverManager.edgedriver().create();
+                   WebDriverManager.edgedriver().setup();
+                   driver = new EdgeDriver();
+                   break;
+
+               case "safari":
+                   WebDriverManager.safaridriver().setup();
+                   driver = new SafariDriver();
                    break;
            }
         }

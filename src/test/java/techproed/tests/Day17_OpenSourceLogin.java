@@ -31,5 +31,14 @@ public class Day17_OpenSourceLogin {
 
     }
 
+    /*
+    git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Emina3/testNG.git
+git push -u origin main
+     */
+
 
 }
