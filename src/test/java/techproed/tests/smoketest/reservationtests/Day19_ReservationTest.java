@@ -1,6 +1,7 @@
 package techproed.tests.smoketest.reservationtests;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 import techproed.pages.HomePage;
@@ -9,7 +10,10 @@ import techproed.utilities.ConfigReader;
 import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -92,19 +96,46 @@ Then verify the home page is displayed
         Calendar calendar=Calendar.getInstance();
 //        enter pick up date
         homePage.pickUpDate.sendKeys("10/10/2023");
+        ReusableMethods.waitFor(2);
 //        enter pick up hour
         homePage.pickUpTime.sendKeys(simpleDateFormat1.format(calendar.getTime()));
 //       enter drop of date
         homePage.dropOffDate.sendKeys("12/11/2023");
+        ReusableMethods.waitFor(2);
 //        enter drop of hour
         homePage.dropOffTime.sendKeys(simpleDateFormat1.format(calendar.getTime()));
+//   =====================================================================================
+ //    Mr Saban's solution
 
+
+//        LocalDate pickUpDateLocal = LocalDate.of(2023,1,30);
+//        LocalDate dropOffDateLocal = LocalDate.of(2023,1,29);
+//
+//        Date pickUpDate = Date.from(pickUpDateLocal.atStartOfDay(ZoneId.systemDefault()).toInstant());
+//        Date dropOffDate = Date.from(dropOffDateLocal.atStartOfDay(ZoneId.systemDefault()).toInstant());
+//
+//
+//        DateFormat dateFormat = new SimpleDateFormat("dd/MMMM/yyyy");
+//        DateFormat timeFormat = new SimpleDateFormat("hh:mm aa");
+//
+//        Calendar calendar=Calendar.getInstance();
+//
+//        //        And enter pick up date field
+//        homePage.pickUpDate.sendKeys(dateFormat.format(pickUpDate));
+//        ReusableMethods.waitFor(2);
+//        //        And enter pick up time field
+//        homePage.pickUpTime.sendKeys(timeFormat.format(calendar.getTime()));
+//        //        And enter drop off date field
+//        homePage.dropOffDate.sendKeys(dateFormat.format(dropOffDate));
+//        ReusableMethods.waitFor(2);
+//        //        And enter drop off date field
+//        homePage.dropOffTime.sendKeys(timeFormat.format(calendar.getTime()));
 
 
 //   ==========================================================================================
 
 //        And click continue reservation
-        homePage.continueReservationButton.click();
+       homePage.continueReservationButton.click();
 
       //  THERE IS A BLOCKER ,BUG IN APP
 
@@ -140,7 +171,7 @@ Then verify the home page is displayed
 
 //        Then verify the home page is displayed
 
-        Driver.closeDriver();
+       Driver.closeDriver();
 
     }
 

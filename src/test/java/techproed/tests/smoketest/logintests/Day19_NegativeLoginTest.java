@@ -19,7 +19,9 @@ public class Day19_NegativeLoginTest {
 
 
     @Test
-    public void inccorectEmailAndPassTest() throws IOException {
+    public void US100208_Negative_Login() throws IOException {
+//        As customer, I should not be able to log in the application
+        //going blue rental car home page
 
         //        https://www.bluerentalcars.com/
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
