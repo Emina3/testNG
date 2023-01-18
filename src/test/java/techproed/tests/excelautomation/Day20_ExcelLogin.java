@@ -28,7 +28,7 @@ public class Day20_ExcelLogin {
         loginPage = new LoginPage();
         ReusableMethods.waitFor(1);
         try {
-            homePage.homePageLoginButton.click();
+            homePage.homePageLoginLink.click();
             ReusableMethods.waitFor(1);
         }catch (Exception e){
 
@@ -36,13 +36,13 @@ public class Day20_ExcelLogin {
 
         try{
             ReusableMethods.waitFor(1);
-            homePage.usernameDropDown.click();
+            homePage.userID.click();
             ReusableMethods.waitFor(1);
             homePage.logoutLink.click();
             ReusableMethods.waitFor(1);
             homePage.OK.click();
             ReusableMethods.waitFor(1);
-            homePage.homePageLoginButton.click();
+            homePage.homePageLoginLink.click();
             ReusableMethods.waitFor(1);
 
         }catch (Exception e){
@@ -68,15 +68,15 @@ public class Day20_ExcelLogin {
         for(Map<String,String> eachData : allTestData){
 //        Takes us to the login page
             login();
-            loginPage.emailInput.sendKeys(eachData.get("username"));
+            loginPage.userName.sendKeys(eachData.get("username"));
             ReusableMethods.waitFor(1);
-            loginPage.passwordInput.sendKeys(eachData.get("password"));
+            loginPage.password.sendKeys(eachData.get("password"));
             ReusableMethods.waitFor(1);
-            loginPage.loginSubmitButton.click();
+            loginPage.loginButton.click();
             ReusableMethods.waitFor(1);
  //        Verify if login is successful
 //         IF USER ID IS DISPLAYED THEN LOGIN IS SUCCESSFUL
-           ReusableMethods.verifyElementDisplayed(homePage.usernameDropDown);
+           ReusableMethods.verifyElementDisplayed(homePage.userID);
 
         }
     }

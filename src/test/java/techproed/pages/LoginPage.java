@@ -13,13 +13,13 @@ public class LoginPage {
     }
 
     @FindBy(id = "formBasicEmail")
-    public WebElement emailInput;
+    public WebElement userName;
 
     @FindBy(id = "formBasicPassword")
-    public WebElement passwordInput;
+    public WebElement password;
 
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement loginSubmitButton;
+    public WebElement loginButton;
 
     @FindBy(xpath = "//div[@role='alert']")
     public WebElement errorMessage_incorrectEmailPass;

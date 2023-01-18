@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Blue Rental Car Project" verbose="1" >
+    <test name="SmokeTest"   >
+        <packages>
+            <package name="techproed.tests.smoketest.logintests" /> <!--This will run logintests package   -->
+            <package name="techproed.tests.smoketest.reservationtests" /> <!--This will run logintests package   -->
+        </packages>
+    </test>
+</suite>
+
+<!--SUITE > TEST > PACKAGE > GROUPS > CLASS > METHOD > INCLUDE - EXCLUDE
+ verbose: The amount og info.The bigger number the bigger info.
+
+ SAVE TOUR XML FILE
+ RUN YOUR XML FILE
+ -->

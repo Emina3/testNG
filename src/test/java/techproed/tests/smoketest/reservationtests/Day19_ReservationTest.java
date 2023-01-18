@@ -63,17 +63,17 @@ Then verify the home page is displayed
         homePage=new HomePage();
         loginPage= new LoginPage();
         ReusableMethods.waitFor(3);
-        homePage.homePageLoginButton.click();
+        homePage.homePageLoginLink.click();
 //        sending credentials and clicking on login button
         ReusableMethods.waitFor(3);
-        loginPage.emailInput.sendKeys("jack@gmail.com");
+        loginPage.userName.sendKeys("jack@gmail.com");
 //        Type  John.123 into password input
-        loginPage.passwordInput.sendKeys("12345");
+        loginPage.password.sendKeys("12345");
 //        Click on login submit button
-        loginPage.loginSubmitButton.click();
+        loginPage.loginButton.click();
 //        Verify that user logged in
         //           assertTrue(homePage.usernameDropDown.isDisplayed());
-        ReusableMethods.verifyElementDisplayed(homePage.usernameDropDown);//Recommended
+        ReusableMethods.verifyElementDisplayed(homePage.userID);//Recommended
 
 //    NOW THAT U LOGGED IN THE APP, WE CAN ENTER REQUIRED FIELDS
 //        And select a car

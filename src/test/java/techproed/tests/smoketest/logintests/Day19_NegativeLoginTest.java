@@ -27,19 +27,28 @@ public class Day19_NegativeLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 //      Click on login button
         HomePage homePage= new HomePage();
-        homePage.homePageLoginButton.click();
+        homePage.homePageLoginLink.click();
 
 //        Type  john@doe.com into email input
         LoginPage loginPage = new LoginPage();
-        loginPage.emailInput.sendKeys("fake@bluerentalcars.com");
+        loginPage.userName.sendKeys("fake@bluerentalcars.com");
 
 //
 //        Type  John.123 into password input
-        loginPage.passwordInput.sendKeys("fakepass");
+        loginPage.password.sendKeys("fakepass");
         ReusableMethods.waitFor(3);
+
+        try{
+            homePage.userID.click();
+            homePage.logoutLink.click();
+            homePage.OK.click();
+
+        }catch(Exception e){
+
+        }
 //
 //        Click on login submit button
-        loginPage.loginSubmitButton.click();
+        loginPage.loginButton.click();
         ReusableMethods.waitFor(3);
 
        // Error: User with email fake@bluerentalcars.com not found
@@ -53,28 +62,28 @@ public class Day19_NegativeLoginTest {
 
 
 
-    @Test
+    @Test(groups = "minor-regression-group")
     public void invalidCredsTest() throws IOException {
 
         //        https://www.bluerentalcars.com/
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 //      Click on login button
         HomePage homePage= new HomePage();
-        homePage.homePageLoginButton.click();
+        homePage.homePageLoginLink.click();
 
 //        Type  john@doe.com into email input
         LoginPage loginPage = new LoginPage();
         faker = new Faker();
         String fakeEmail = faker.internet().emailAddress();
-        loginPage.emailInput.sendKeys(fakeEmail);
+        loginPage.userName.sendKeys(fakeEmail);
 
 //
 //        Type  John.123 into password input
-        loginPage.passwordInput.sendKeys(faker.internet().password(4,6));
+        loginPage.password.sendKeys(faker.internet().password(4,6));
         ReusableMethods.waitFor(3);
 //
 //        Click on login submit button
-        loginPage.loginSubmitButton.click();
+        loginPage.loginButton.click();
         ReusableMethods.waitFor(3);
 
         // Error: User with email fake@bluerentalcars.com not found

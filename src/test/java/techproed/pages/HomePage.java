@@ -12,10 +12,10 @@ public class HomePage {
     }
 
     @FindBy(partialLinkText = "Login")
-    public WebElement homePageLoginButton;
+    public WebElement homePageLoginLink;
 
     @FindBy(id = "dropdown-basic-button")
-    public WebElement usernameDropDown;
+    public WebElement userID;
 
     @FindBy(xpath = "//select[@name='car']")
     public WebElement selectACar;

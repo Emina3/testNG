@@ -38,22 +38,22 @@ public class Day18_PositiveLoginTest {
         Driver.getDriver().get(ConfigReader.getProperty("app_home_url"));
 //      Click on login button
         HomePage homePage= new HomePage();
-        homePage.homePageLoginButton.click();
+        homePage.homePageLoginLink.click();
 
 //        Type  john@doe.com into email input
         LoginPage loginPage = new LoginPage();
-        loginPage.emailInput.sendKeys("john@doe.com");
+        loginPage.userName.sendKeys("john@doe.com");
 
 //
 //        Type  John.123 into password input
-        loginPage.passwordInput.sendKeys("John.123");
+        loginPage.password.sendKeys("John.123");
 //
 //        Click on login submit button
-        loginPage.loginSubmitButton.click();
+        loginPage.loginButton.click();
 //
 //        Verify that user logged in
      //           assertTrue(homePage.usernameDropDown.isDisplayed());
-        ReusableMethods.verifyElementDisplayed(homePage.usernameDropDown);//Recommended
+        ReusableMethods.verifyElementDisplayed(homePage.userID);//Recommended
 
         Driver.closeDriver();
 
