@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import techproed.pages.XYZBankManagerPage;
 import techproed.pages.XYZBankCustomerPage;
@@ -99,7 +100,7 @@ public class XYZBankTest {
 
  */
 
-    @Test
+    @Test(groups = "smoke-test")
     public void xzyBank(){
 //        Go to url https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login
         Driver.getDriver().get(ConfigReader.getProperty("xzy_bank_url"));
@@ -239,7 +240,11 @@ public class XYZBankTest {
 //        Assert that number of customers is 0
         Assert.assertEquals(0,numbOfRowsAfterDelete);
 
-     Driver.closeDriver();
+    }
 
+    @AfterMethod
+    public void closeDriver(){
+        ReusableMethods.waitFor(2);
+        Driver.closeDriver();
     }
 }

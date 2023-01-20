@@ -51,7 +51,7 @@ public class Day21_DataProvider1 {
 
     }
 
-    @Test(dataProvider = "my_smoke_data")
+    @Test(dataProvider = "my_smoke_data")//If we customize data provider,then we need to use its name
     public void dataProviderTest2(String user,String pass){
 
         System.out.println("User: "+user+"<====> Pass :"+pass);

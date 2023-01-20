@@ -20,17 +20,16 @@ In class 2, we received the data from the class itself. In this class, we get th
 
     HomePage homePage;
     LoginPage loginPage;
+
     @DataProvider
     public Object[][] customerData(){
-//    TEST DATA. GET DATA FROM EXCEL
-//        PATH OF EXCEL SHEET
-        String path="./src/test/java/resources/mysmoketestdata.xlsx";
-//        SHEET NAME
-        String sheetName = "customer_info";
-//        CALL EXCEL UTIL CLASS
-        ExcelUtils excelUtils=new ExcelUtils(path,sheetName);
-//        USE ONE OF THE EXCEL UTIL METHOD TO RECEIVE THE DATA FROM THE EXCEL
 
+//    TEST DATA. GET DATA FROM EXCEL
+        String path="./src/test/java/resources/mysmoketestdata.xlsx";//PATH OF EXCEL SHEET
+        String sheetName = "customer_info";//SHEET NAME
+
+        ExcelUtils excelUtils = new ExcelUtils(path,sheetName);// CALL EXCEL UTIL CLASS
+//        USE ONE OF THE EXCEL UTIL METHOD TO RECEIVE THE DATA FROM THE EXCEL
         Object [][] customerCredentials = excelUtils.getDataArrayWithoutFirstRow();
 
 //        Object [][] customerCredentials = {
