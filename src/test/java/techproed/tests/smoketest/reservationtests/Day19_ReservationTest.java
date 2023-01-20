@@ -105,31 +105,6 @@ Then verify the home page is displayed
 //        enter drop of hour
         homePage.dropOffTime.sendKeys(simpleDateFormat1.format(calendar.getTime()));
 //   =====================================================================================
- //    Mr Saban's solution
-
-
-//        LocalDate pickUpDateLocal = LocalDate.of(2023,1,30);
-//        LocalDate dropOffDateLocal = LocalDate.of(2023,1,29);
-//
-//        Date pickUpDate = Date.from(pickUpDateLocal.atStartOfDay(ZoneId.systemDefault()).toInstant());
-//        Date dropOffDate = Date.from(dropOffDateLocal.atStartOfDay(ZoneId.systemDefault()).toInstant());
-//
-//
-//        DateFormat dateFormat = new SimpleDateFormat("dd/MMMM/yyyy");
-//        DateFormat timeFormat = new SimpleDateFormat("hh:mm aa");
-//
-//        Calendar calendar=Calendar.getInstance();
-//
-//        //        And enter pick up date field
-//        homePage.pickUpDate.sendKeys(dateFormat.format(pickUpDate));
-//        ReusableMethods.waitFor(2);
-//        //        And enter pick up time field
-//        homePage.pickUpTime.sendKeys(timeFormat.format(calendar.getTime()));
-//        //        And enter drop off date field
-//        homePage.dropOffDate.sendKeys(dateFormat.format(dropOffDate));
-//        ReusableMethods.waitFor(2);
-//        //        And enter drop off date field
-//        homePage.dropOffTime.sendKeys(timeFormat.format(calendar.getTime()));
 
 
 //   ==========================================================================================

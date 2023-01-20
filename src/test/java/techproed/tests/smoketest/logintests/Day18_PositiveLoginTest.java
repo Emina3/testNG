@@ -40,6 +40,7 @@ public class Day18_PositiveLoginTest {
         HomePage homePage= new HomePage();
         homePage.homePageLoginLink.click();
 
+
 //        Type  john@doe.com into email input
         LoginPage loginPage = new LoginPage();
         loginPage.userName.sendKeys("john@doe.com");

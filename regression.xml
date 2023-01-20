@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Blue Rental Car Project" verbose="1" >
+    <test name="RegressionTest"   >
+        <packages>
+
+            <!-- THIS WILL RUN EVERY PACKAGIES THAT HAS @Test Annotation   -->
+            <package name="techproed.*" />
+
+        </packages>
+    </test>
+</suite>
+
+<!--SUITE > TEST > PACKAGE > GROUPS > CLASS > METHOD > INCLUDE - EXCLUDE
+ verbose: The amount og info.The bigger number the bigger info.
+
+ SAVE TOUR XML FILE
+ RUN YOUR XML FILE
+ -->

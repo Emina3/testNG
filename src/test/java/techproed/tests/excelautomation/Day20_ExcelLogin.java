@@ -54,7 +54,7 @@ public class Day20_ExcelLogin {
 
     @Test
     public void customerLoginTest(){
-        String path ="./src/test/java/resources/mysmoketestdata.xlsx";// ./ means all of the preious folders
+        String path ="./src/test/java/resources/mysmoketestdata.xlsx";// ./ means all of the previous folders
         String sheetName="customer_info";
         excelUtils=new ExcelUtils(path,sheetName);
 //      getDataList() method returns all excel data
