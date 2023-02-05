@@ -230,6 +230,7 @@ public class XYZBankTest {
 
 //        Click on each "Delete" button
         for(WebElement  w : xyzBankManagerPage.deleteButtons){
+            ReusableMethods.waitFor(1);
             w.click();
 
         }

@@ -10,7 +10,7 @@ import techproed.utilities.Driver;
 import techproed.utilities.ReusableMethods;
 
 import java.io.IOException;
-
+@Test(groups = "minor-regression-group")
 public class Day19_NegativeLoginTest {
 
     HomePage homePage;

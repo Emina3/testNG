@@ -42,6 +42,24 @@ public class HomePage {
     public WebElement OK;
 
 
+    ///   ECOMMERCE PROJECT
+
+    @FindBy(xpath = "//span[.='Sign In']")
+    public WebElement signInSection;
+
+    @FindBy(id = "username")
+    public WebElement username;
+
+    @FindBy(id = "password")
+    public WebElement password;
+
+    @FindBy(name = "login")
+    public WebElement signInButton;
+
+    @FindBy(partialLinkText ="Sign Out")
+    public WebElement signOut;
+
+
 
 
 

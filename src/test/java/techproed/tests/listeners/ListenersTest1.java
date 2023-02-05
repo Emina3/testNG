@@ -1,4 +1,4 @@
-package techproed.tests;
+package techproed.tests.listeners;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;

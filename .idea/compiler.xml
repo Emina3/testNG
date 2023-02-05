@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SeleniumFirstProject" />
+        <module name="testNGProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="testNgproject" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>

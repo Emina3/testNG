@@ -54,7 +54,7 @@ import techproed.utilities.ReusableMethods;
             ReusableMethods.waitFor(1);
         }
 
-        @Test(dataProvider = "customerData")
+        @Test(dataProvider = "customerData")//dataProvider = method name
         public void customerLoginTest(String username, String password) {
 //            Takes us to the login page
             login();

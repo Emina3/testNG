@@ -8,7 +8,7 @@
     <test verbose="2" preserve-order="true"
           name="/Users/techproed/IdeaProjects/testNGProject/src/test/java/techproed/tests/listeners/ListenersTest3.java">
         <classes>
-            <class name="techproed.tests.ListenersTest2">
+            <class name="techproed.tests.ListenersTest3">
                 <methods>
                     <include name="US100201_Admin_Login"/>
                 </methods>
